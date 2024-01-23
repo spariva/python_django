@@ -8,9 +8,11 @@ def run(symbol: str) -> str:
     #el primer número es el exponente de x
     #el segundo número es el coeficiente de x
     #separamos el string en dos números
+    coeficiente, exponente = symbol.split(',')
+    exponente = int(exponente) + 1
+    coeficiente = int(int(coeficiente) / exponente)
+    integral = f'{coeficiente}x^{exponente}'
     
-    integral = 'output'
-
     return integral
 
 
