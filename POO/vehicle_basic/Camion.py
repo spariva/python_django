@@ -1,4 +1,4 @@
-import Coche as c
+import Coche as c #alias para no sobreescribir el nombre de la clase
 
 class Camion(c.Coche):
     def __init__(self, matricula: str, num_ruedas: int = 8, lista_cajas: list = []):
