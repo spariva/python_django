@@ -24,10 +24,13 @@ class Grua(c.Coche):
         print("Cargando vehiculo " + vehiculo.matricula)
         self.lista_vehiculos.append(vehiculo)
         
-    def descargar(self, vehiculo: c.Coche):
-        if vehiculo not in self.lista_vehiculos:
-            raise Exception("El vehiculo no está en la grua")
-        
-        print("Descargando vehiculo " + vehiculo.matricula)
-        self.lista_vehiculos.remove(vehiculo)
+class VehiculoNotInGruaException(Exception):
+    pass
+
+def descargar(self, vehiculo: c.Coche):
+    if vehiculo not in self.lista_vehiculos:
+        raise VehiculoNotInGruaException("El vehiculo no está en la grua")
+    
+    print("Descargando vehiculo " + vehiculo.matricula)
+    self.lista_vehiculos.remove(vehiculo)
     
