@@ -1,0 +1,12 @@
+{% if question_list %}
+    <ul>
+    {% for question in question_list %}
+        <li><a href="/polls/{{question.id}}">{{ question.question_text }}</a></li>
+        <!-- lo del {{question.id}} es como un php echo, imprime el valor de la variable-->
+        <!-- -->
+        <!--<li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li> esto hace una función-->
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
