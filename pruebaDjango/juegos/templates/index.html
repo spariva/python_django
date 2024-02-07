@@ -1,7 +1,7 @@
 {% if juego_list %}
     <ul>
     {% for juego in juego_list %}
-        <li><a href="/juegos/{{juego.id}}">{{ juego.juego_name }}</a></li>
+        <li><a href="{% url 'juegos:detail' juego.id %}">{{ juego.juego_name }}</a></li>
         <!-- lo del {{juego.id}} es como un php echo, imprime el valor de la variable-->
         <!-- -->
         <!--<li><a href="{% url 'juegos:detail' juego.id %}">{{ juego.juego_name }}</a></li> esto hace una función-->
